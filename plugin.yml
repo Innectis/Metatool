@@ -1,0 +1,7 @@
+name: Metatool
+version: 0.9
+main: com.bukkit.Innectis.Metatool.MetatoolMain
+commands:
+  meta:
+    description: Block metadata set command
+    usage: /meta stop|<byte>
