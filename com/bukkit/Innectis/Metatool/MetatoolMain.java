@@ -9,9 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.Server;
 import org.bukkit.event.Event.Priority;
 import org.bukkit.event.Event;
-import org.bukkit.inventory.ItemStack;
 
-import org.bukkit.material.MaterialData;
 import org.bukkit.plugin.*;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.command.*;
@@ -59,7 +57,7 @@ public class MetatoolMain extends JavaPlugin
 
 		if (args.length == 0) {
 			return false;
-		} else if (args[0] == "stop") {
+		} else if (args[0].equals("stop")) {
 			setStatus(player, -1);
 			player.sendMessage("§7No longer setting");
 			log("[MTOOL] SpaceManiac stopped setting");
@@ -78,7 +76,6 @@ public class MetatoolMain extends JavaPlugin
 			setStatus(player, b);
 			return true;
 		}
-		return true;
 	}
 
 	public void onDisable()
